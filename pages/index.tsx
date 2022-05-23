@@ -1,16 +1,21 @@
 import { GetServerSideProps, NextPage } from 'next';
 import * as React from 'react';
-import ReposList from "../src/components/ReposList";
-import { Repos } from "../src/interfaces/global_interfaces";
+import { IRepos } from '../src/interfaces/global';
+import RepoCardList from '../src/components/ui/organisms/RepoCardList';
 
-
-const IndexPage: NextPage<Repos> = ({ repos }) => {
-  return (
-    <ReposList repos={repos}/>
-  );
+/**
+ *
+ * @param repos
+ * @constructor
+ */
+const IndexPage: NextPage<IRepos> = ({ repos }) => {
+  return <RepoCardList repos={repos} />;
 };
 export default IndexPage;
 
+/**
+ * Fetch all repos (including repo details, number of thumbs up)
+ */
 export const getServerSideProps: GetServerSideProps = async () => {
   const url = `${process.env.UPVOTER_API_URL}/repos`;
   const res = await fetch(url);
