@@ -5,6 +5,6 @@ export interface IRepo {
     html_url: string;
 }
 
-export interface Repos {
+export interface IRepos {
     repos: [IRepo];
 }
