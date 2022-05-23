@@ -7,10 +7,10 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { NextPage } from 'next';
-import { Repos } from '../interfaces/global_interfaces';
+import { IRepos } from '../interfaces/global';
 import {Link, Typography} from "@mui/material";
 
-const RepoList: NextPage<Repos> = ({ repos }) => {
+const RepoList: NextPage<IRepos> = ({ repos }) => {
   console.log(repos);
 
   return (
