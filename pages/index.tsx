@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from 'next';
 import * as React from 'react';
 import { IRepos } from '../src/interfaces/global';
-import RepoCardList from '../src/components/ui/organisms/RepoCardList';
+import RepoCardsList from '../src/components/ui/organisms/RepoCardsList';
 
 /**
  *
@@ -9,7 +9,7 @@ import RepoCardList from '../src/components/ui/organisms/RepoCardList';
  * @constructor
  */
 const IndexPage: NextPage<IRepos> = ({ repos }) => {
-  return <RepoCardList repos={repos} />;
+  return <RepoCardsList repos={repos} />;
 };
 export default IndexPage;
 
