@@ -8,14 +8,21 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { NextPage } from 'next';
 import { Repos } from '../interfaces/global_interfaces';
+import {Link, Typography} from "@mui/material";
 
 const RepoList: NextPage<Repos> = ({ repos }) => {
+  console.log(repos);
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Repo Name</TableCell>
+            <TableCell>
+              <Typography variant={"h3"}>
+                Repo Name
+              </Typography>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -25,7 +32,9 @@ const RepoList: NextPage<Repos> = ({ repos }) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {repo.name}
+                <Link href={repo.html_url} rel="noopener" target="_blank">
+                  {repo.name}
+                </Link>
               </TableCell>
             </TableRow>
           ))}
