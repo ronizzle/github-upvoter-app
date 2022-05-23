@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { NextPage } from 'next';
 import { IRepos } from '../interfaces/global';
-import {Link, Typography} from "@mui/material";
+import { Link, Typography } from '@mui/material';
 
 const RepoList: NextPage<IRepos> = ({ repos }) => {
   console.log(repos);
@@ -19,9 +19,7 @@ const RepoList: NextPage<IRepos> = ({ repos }) => {
         <TableHead>
           <TableRow>
             <TableCell>
-              <Typography variant={"h3"}>
-                Repo Name
-              </Typography>
+              <Typography variant={'h3'}>Repo Name</Typography>
             </TableCell>
           </TableRow>
         </TableHead>
