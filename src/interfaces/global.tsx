@@ -1,11 +1,14 @@
 export interface IRepo {
-  repo: {
-    id: string;
-    name: string;
-    html_url: string;
-  };
+  id: string;
+  name: string;
+  html_url: string;
+}
+
+export interface RepoProps {
+  repo: IRepo
 }
 
 export interface IRepos {
-  repos: [IRepo];
+  repos: IRepo[];
 }
+
