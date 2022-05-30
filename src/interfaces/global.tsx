@@ -1,10 +1,10 @@
 export interface IRepo {
-  id: string;
-  name: string;
+  created_at: string;
+  description: string;
   full_name: string;
   html_url: string;
-  description: string;
-  created_at: string;
+  id: string;
+  name: string;
   language: string;
   license: {
     name: string;
@@ -15,6 +15,10 @@ export interface IRepo {
     html_url: string;
     login: string;
   };
+  status: boolean;
+  upvote: {
+    count: number;
+  }
 }
 
 export interface RepoProps {
