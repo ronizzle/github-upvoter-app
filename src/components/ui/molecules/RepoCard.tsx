@@ -5,13 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import CardHeader from '@mui/material/CardHeader';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import Bullet from '../atoms/Bullet';
 import { RepoProps } from '../../../interfaces/global';
 import moment from 'moment';
+import Upvote from "../atoms/Upvote";
 
 const RepoCard: React.FC<RepoProps> = ({ repo }) => {
   console.log(repo);
@@ -24,9 +22,7 @@ const RepoCard: React.FC<RepoProps> = ({ repo }) => {
           </Link>
         }
         action={
-          <IconButton>
-            <ThumbUpIcon />
-          </IconButton>
+          <Upvote repo={repo} />
         }
         title={repo.full_name}
         subheader={moment(repo.created_at).format('MMMM Do YYYY, h:mm:ss a')}
