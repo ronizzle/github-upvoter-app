@@ -12,7 +12,6 @@ import moment from 'moment';
 import Upvote from "../atoms/Upvote";
 
 const RepoCard: React.FC<RepoProps> = ({ repo }) => {
-  console.log(repo);
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardHeader
